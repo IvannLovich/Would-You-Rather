@@ -1,0 +1,34 @@
+.nav {
+  position: sticky;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  background: #cfd8dc;
+}
+
+.nav span {
+  cursor: pointer;
+  color: #0d47a1;
+}
+
+.nav__right {
+  display: flex;
+}
+
+.nav__right h2 {
+  padding-right: 2rem;
+}
+
+.nav__right span {
+  align-self: center;
+  padding-right: 2rem;
+}
+
+.nav__left {
+  display: flex;
+  list-style: none;
+}
+.nav__left li + li {
+  padding-left: 1rem;
+}

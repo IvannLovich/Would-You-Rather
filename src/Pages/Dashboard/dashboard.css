@@ -1,0 +1,91 @@
+.polls {
+  padding-top: 3rem;
+}
+
+.polls__cards {
+  position: relative;
+  cursor: pointer;
+  width: 11rem;
+  height: 14rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid rgba(39, 34, 32, 0.561);
+  margin: 0 auto;
+  transition: all 0.5s ease;
+  box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.555);
+}
+
+.polls__cards:hover {
+  width: 14rem;
+  height: 16rem;
+}
+
+.polls--answered {
+  background: rgba(39, 34, 32, 0.068);
+}
+
+.polls--unanswered {
+  background: rgba(228, 187, 5, 0.418);
+}
+
+.polls__text {
+  width: 12rem;
+  font-size: 14px;
+}
+
+.polls__detail {
+  width: 25rem;
+  padding: 2.5rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+  border-radius: 10px;
+  border: 1px solid;
+}
+
+.polls__detail-texts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.polls__form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.polls__select-options-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.polls__select-options {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.polls__buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.polls__user-vote {
+  display: inline-block;
+  padding: 0.3rem;
+  border-radius: 3px;
+  border: 1px solid rgba(165, 11, 11, 0.876);
+  text-transform: uppercase;
+  font-size: 10px;
+  color: rgba(165, 11, 11, 0.876);
+  margin-left: 1rem;
+}

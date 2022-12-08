@@ -1,0 +1,65 @@
+.main-content {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 80rem;
+  min-width: 16rem;
+}
+button {
+  cursor: pointer;
+  border-radius: 3px;
+  color: #fff;
+  background: rgba(25, 83, 122, 0.897);
+  border: 1px solid rgba(25, 83, 122, 0.897);
+}
+
+button:disabled {
+  background: rgba(128, 128, 128, 0.493);
+  color: #555;
+  cursor: not-allowed;
+}
+
+.dashboard__qts-buttons-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 20rem;
+  margin: auto;
+}
+
+.dashboard__indicator {
+  width: 7rem;
+  height: 0.2rem;
+  background: rgb(78, 124, 230);
+  margin-top: 0.4rem;
+  border-radius: 0.2rem;
+  transition: width 0.4s;
+}
+
+.dashboard__indicator.active {
+  width: 0;
+}
+
+.dashboard__qts-button {
+  padding: 0.5rem;
+  width: 7rem;
+}
+
+
+.button-new-poll {
+  padding: 0.5rem 0 0.5rem 0;
+  width: 100%;
+}
+
+.not-login-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.not-login-page__button {
+  padding: 0.5rem;
+  width: 7rem;
+}

@@ -1,0 +1,15 @@
+.score-board {
+  padding-top: 7rem;
+}
+
+.score-board__table {
+  border-collapse: collapse;
+  margin: auto;
+  width: 80%;
+}
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
