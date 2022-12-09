@@ -1,13 +1,13 @@
 import { BrowserRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
-import Login from './Pages/Login/Login';
+import Login from './pages/Login/Login';
 import PrivateRoutes from './PrivateRoutes';
-import Dashboard from './Pages/Dashboard/Dashboard';
+import Dashboard from './pages/Dashboard/Dashboard';
 import NavBar from './components/NavBar/NavBar';
-import PollDetail from './Pages/PollDetail/PollDetail';
+import PollDetail from './pages/PollDetail/PollDetail';
 import NewQuestion from './components/NewQuestion/NewQuestion';
-import ScoreBoard from './Pages/ScoreBoard/ScoreBoard';
-import NotFoundPage from './Pages/NotFound/NotFoundPage';
+import ScoreBoard from './pages/ScoreBoard/ScoreBoard';
+import NotFoundPage from './pages/NotFound/NotFoundPage';
 
 
 
