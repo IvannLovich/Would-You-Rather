@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-// import { connect } from 'react-redux';
-// import { bindActionCreators } from 'redux';
 import Polls from '../../components/Polls/Polls';
 import { useDashboardData } from '../../hooks/useDashboardData';
 import '../../base.css';
