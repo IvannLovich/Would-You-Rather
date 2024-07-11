@@ -8,10 +8,10 @@ import PollDetail from './pages/PollDetail/PollDetail';
 import NewQuestion from './components/NewQuestion/NewQuestion';
 import ScoreBoard from './pages/ScoreBoard/ScoreBoard';
 import NotFoundPage from './pages/NotFound/NotFoundPage';
+import { useDashboardData } from './hooks/useDashboardData';
 
-
-
-function App({ loggedUser }) {
+function App() {
+  const { loggedUser } = useDashboardData();
   console.log('--->', loggedUser);
   return (
     <BrowserRouter>
@@ -46,10 +46,4 @@ function App({ loggedUser }) {
   );
 }
 
-function mapStateToProps({loggedUser}) {
-  return {
-    loggedUser,
-  };
-}
-
-export default connect(mapStateToProps, null)(App);
+export default App;

@@ -1,9 +1,6 @@
 import { useEffect } from 'react';
-import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import { bindActionCreators } from 'redux';
-import { getUsersData } from '../../actions/data';
-import { handleSetAuthUser } from '../../actions/loggedUser';
+import { useDashboardData } from '../../hooks/useDashboardData';
 
 import John from '../../public/Images/gamer.png';
 import Sarah from '../../public/Images/woman.png';
@@ -12,12 +9,9 @@ import Tyler from '../../public/Images/man.png';
 import '../../base.css';
 import './users.css';
 
-function Login({ getUsersData, users, handleSetAuthUser }) {
+function Login() {
   const history = useHistory();
-
-  useEffect(() => {
-    getUsersData();
-  }, []);
+  const { users, handleSetAuthUser } = useDashboardData();
 
   function userAvatar(userId) {
     switch (userId) {
@@ -59,14 +53,4 @@ function Login({ getUsersData, users, handleSetAuthUser }) {
   );
 }
 
-function mapStateToProps({ users }) {
-  return {
-    users,
-  };
-}
-
-function mapDispachToProps(dispatch) {
-  return bindActionCreators({ getUsersData, handleSetAuthUser }, dispatch);
-}
-
-export default connect(mapStateToProps, mapDispachToProps)(Login);
+export default Login;

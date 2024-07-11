@@ -1,25 +1,14 @@
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { getQuestionsData, getUsersData } from '../../actions/data';
-import { handleSetAuthUser } from '../../actions/loggedUser';
-
+import { useDashboardData } from '../../hooks/useDashboardData';
 import getPercentage from '../../utils/helpers';
 
-function PollDetail({
-  getQuestionsData,
-  questions,
-  getUsersData,
-  users,
-  loggedUser,
-  handleSetAuthUser,
-}) {
+function PollDetail() {
   const { id } = useParams();
+  const { questions, users, loggedUser, handleSetAuthUser } =
+    useDashboardData();
 
   useEffect(() => {
-    getQuestionsData();
-    getUsersData();
     handleSetAuthUser(loggedUser);
   }, []);
 
@@ -56,19 +45,4 @@ function PollDetail({
   );
 }
 
-function mapStateToProps({ questions, users, loggedUser }) {
-  return {
-    questions,
-    users,
-    loggedUser,
-  };
-}
-
-function mapDispachToProps(dispatch) {
-  return bindActionCreators(
-    { getQuestionsData, getUsersData, handleSetAuthUser },
-    dispatch,
-  );
-}
-
-export default connect(mapStateToProps, mapDispachToProps)(PollDetail);
+export default PollDetail;

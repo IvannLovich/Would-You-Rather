@@ -1,17 +1,11 @@
-import { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { getUsersData } from '../../actions/data';
-import { handleSetAuthUser } from '../../actions/loggedUser';
+import { useDashboardData } from '../../hooks/useDashboardData';
 
 import './nav.css';
 
-function NavBar({ users, loggedUser, handleSetAuthUser, getUsersData }) {
+function NavBar() {
   const history = useHistory();
-  useEffect(() => {
-    getUsersData();
-  }, []);
+  const { users, loggedUser, handleSetAuthUser } = useDashboardData();
 
   return (
     <nav className="nav">
@@ -41,15 +35,4 @@ function NavBar({ users, loggedUser, handleSetAuthUser, getUsersData }) {
   );
 }
 
-function mapStateToProps({ users, loggedUser }) {
-  return {
-    users,
-    loggedUser,
-  };
-}
-
-function mapDispachToProps(dispatch) {
-  return bindActionCreators({ handleSetAuthUser, getUsersData }, dispatch);
-}
-
-export default connect(mapStateToProps, mapDispachToProps)(NavBar);
+export default NavBar;

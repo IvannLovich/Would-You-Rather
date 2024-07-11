@@ -1,13 +1,13 @@
 import { useState, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { handleSaveQuestion } from '../../actions/questions';
+import { useDashboardData } from '../../hooks/useDashboardData';
+
 import './new-question.css';
 
-function NewQuestion({ handleSaveQuestion }) {
-  const history = useHistory();
+function NewQuestion() {
   const [options, setOptions] = useState({ optionOne: '', optionTwo: '' });
+  const history = useHistory();
+  const { handleSaveQuestion } = useDashboardData();
 
   const { optionOne, optionTwo } = options;
 
@@ -60,8 +60,4 @@ function NewQuestion({ handleSaveQuestion }) {
   );
 }
 
-function mapDispachToProps(dispatch) {
-  return bindActionCreators({ handleSaveQuestion }, dispatch);
-}
-
-export default connect(null, mapDispachToProps)(NewQuestion);
+export default NewQuestion;

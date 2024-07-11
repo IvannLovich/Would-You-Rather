@@ -20,6 +20,10 @@ button:disabled {
   cursor: not-allowed;
 }
 
+strong {
+  font-size: 11.5px;
+}
+
 .dashboard__qts-buttons-container {
   display: flex;
   justify-content: space-evenly;
@@ -44,7 +48,6 @@ button:disabled {
   padding: 0.5rem;
   width: 7rem;
 }
-
 
 .button-new-poll {
   padding: 0.5rem 0 0.5rem 0;
