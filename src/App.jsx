@@ -1,5 +1,4 @@
 import { BrowserRouter, Route } from 'react-router-dom';
-import { connect } from 'react-redux';
 import Login from './pages/Login/Login';
 import PrivateRoutes from './PrivateRoutes';
 import Dashboard from './pages/Dashboard/Dashboard';

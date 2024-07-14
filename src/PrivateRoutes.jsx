@@ -1,7 +1,9 @@
-import { connect } from 'react-redux';
 import { Route, Redirect } from 'react-router-dom';
+import { useDashboardData } from './hooks/useDashboardData';
 
-function PrivateRoutes({ component: Component, loggedUser, ...rest }) {
+function PrivateRoutes({ component: Component, ...rest }) {
+  const { loggedUser } = useDashboardData();
+
   console.log(rest);
   return (
     <Route
@@ -13,10 +15,4 @@ function PrivateRoutes({ component: Component, loggedUser, ...rest }) {
   );
 }
 
-function mapStateToProps({ loggedUser }) {
-  return {
-    loggedUser,
-  };
-}
-
-export default connect(mapStateToProps)(PrivateRoutes);
+export default PrivateRoutes;
